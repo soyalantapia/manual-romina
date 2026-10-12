@@ -359,6 +359,10 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
   table.quienes td:last-child::before{content:"Qué sigue: ";color:var(--gris)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.buscar-glosario{display:block;width:100%;max-width:420px;margin:2mm 0 4mm;padding:3mm 4mm;font:500 11pt/1.3 var(--letra);border:1px solid var(--lila3);border-radius:3mm;background:#fff;color:var(--tinta)}
+.buscar-glosario:focus{outline:2px solid var(--violeta);outline-offset:1px}
+dl.glosario > div[hidden]{display:none}
+#glosario-vacio{color:var(--gris);margin:0 0 4mm}
 </style>
 </head>
 <body>
@@ -397,28 +401,30 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
     <a href="#historia"><span>10</span><p><b>La historia que vende</b><small>Qué contar de Alan para abrir puertas</small></p></a>
     <a href="#eventos"><span>11</span><p><b>Eventos</b><small>Cómo trabajamos, el mensaje y quién respondió</small></p></a>
     <a href="#hablareventos"><span>12</span><p><b>Cómo hablar con un evento</b><small>Qué decir en cada momento, con ejemplos</small></p></a>
-    <a href="#podcasts"><span>13</span><p><b>Podcasts</b><small>La ronda de octubre y cada conversación</small></p></a>
-    <a href="#hablarpodcasts"><span>14</span><p><b>Cómo hablar con un podcast</b><small>Qué decir en cada momento, con ejemplos</small></p></a>
-    <a href="#prensa"><span>15</span><p><b>Prensa y medios</b><small>Cómo proponer a Alan a periodistas, y lo que ya hay</small></p></a>
-    <a href="#seguimiento"><span>16</span><p><b>El seguimiento</b><small>Qué es, la regla de cada 2 días y los modelos</small></p></a>
-    <a href="#mandar"><span>17</span><p><b>Cómo se manda</b><small>Paso a paso: mail, WhatsApp y respuestas</small></p></a>
-    <a href="#semana"><span>18</span><p><b>La semana</b><small>Todo sale antes del viernes 16/10</small></p></a>
-    <a href="#numeros"><span>19</span><p><b>Los números</b><small>Lo que armamos y cómo se cuenta cada cosa</small></p></a>
-    <a href="#logros"><span>20</span><p><b>Lo que logramos</b><small>Qué gana Alan con más eventos, y el tablero</small></p></a>
-    <a href="#herramientas"><span>21</span><p><b>Claude, agentes y skills</b><small>Qué es cada cosa, desde cero</small></p></a>
-    <a href="#skills"><span>22</span><p><b>Cómo se crea una skill</b><small>Paso a paso, con un ejemplo</small></p></a>
-    <a href="#rutinas"><span>23</span><p><b>Las rutinas de Claude</b><small>Pedidos que Claude hace solo, a una hora</small></p></a>
-    <a href="#github"><span>24</span><p><b>Qué es GitHub</b><small>Repositorios, guardados y páginas</small></p></a>
-    <a href="#cerebro"><span>25</span><p><b>El cerebro de Alan</b><small>Qué es, qué tiene y cómo se mantiene</small></p></a>
-    <a href="#aprovechar"><span>26</span><p><b>Cómo aprovechar el cerebro</b><small>Qué sabe, cómo preguntarle y un día con él</small></p></a>
-    <a href="#contexto"><span>27</span><p><b>Claude con el cerebro</b><small>Cómo trabajar con contexto de todo</small></p></a>
-    <a href="#orquestar"><span>28</span><p><b>Cómo orquestar a las IA</b><small>El tutorial paso a paso, con prompts</small></p></a>
-    <a href="#idea"><span>29</span><p><b>Una idea en pausa</b><small>Charlas para empresas, que también se pueden cobrar</small></p></a>
-    <a href="#fallas"><span>30</span><p><b>Cuando algo falla</b><small>Qué hacer en cada caso</small></p></a>
-    <a href="#aprendimos"><span>31</span><p><b>Lo que aprendimos</b><small>Errores que ya no se repiten</small></p></a>
-    <a href="#donde"><span>32</span><p><b>Dónde está cada cosa</b><small>Carpetas, planillas y links</small></p></a>
-    <a href="#glosario"><span>33</span><p><b>Glosario</b><small>Las palabras difíciles, explicadas</small></p></a>
-    <a href="#tareas"><span>34</span><p><b>Las tareas de Romina</b><small>Al terminar de leer: todo lo que falta, día por día</small></p></a>
+    <a href="#diaevento"><span>13</span><p><b>El día del evento</b><small>Antes, durante y después de cada charla</small></p></a>
+    <a href="#podcasts"><span>14</span><p><b>Podcasts</b><small>La ronda de octubre y cada conversación</small></p></a>
+    <a href="#hablarpodcasts"><span>15</span><p><b>Cómo hablar con un podcast</b><small>Qué decir en cada momento, con ejemplos</small></p></a>
+    <a href="#prensa"><span>16</span><p><b>Prensa y medios</b><small>Cómo proponer a Alan a periodistas, y lo que ya hay</small></p></a>
+    <a href="#seguimiento"><span>17</span><p><b>El seguimiento</b><small>Qué es, la regla de cada 2 días y los modelos</small></p></a>
+    <a href="#mandar"><span>18</span><p><b>Cómo se manda</b><small>Paso a paso: mail, WhatsApp y respuestas</small></p></a>
+    <a href="#semana"><span>19</span><p><b>La semana</b><small>Todo sale antes del viernes 16/10</small></p></a>
+    <a href="#despues"><span>20</span><p><b>Después del viernes</b><small>Las semanas que vienen, hasta Florianópolis</small></p></a>
+    <a href="#numeros"><span>21</span><p><b>Los números</b><small>Lo que armamos y cómo se cuenta cada cosa</small></p></a>
+    <a href="#logros"><span>22</span><p><b>Lo que logramos</b><small>Qué gana Alan con más eventos, y el tablero</small></p></a>
+    <a href="#herramientas"><span>23</span><p><b>Claude, agentes y skills</b><small>Qué es cada cosa, desde cero</small></p></a>
+    <a href="#skills"><span>24</span><p><b>Cómo se crea una skill</b><small>Paso a paso, con un ejemplo</small></p></a>
+    <a href="#rutinas"><span>25</span><p><b>Las rutinas de Claude</b><small>Pedidos que Claude hace solo, a una hora</small></p></a>
+    <a href="#github"><span>26</span><p><b>Qué es GitHub</b><small>Repositorios, guardados y páginas</small></p></a>
+    <a href="#cerebro"><span>27</span><p><b>El cerebro de Alan</b><small>Qué es, qué tiene y cómo se mantiene</small></p></a>
+    <a href="#aprovechar"><span>28</span><p><b>Cómo aprovechar el cerebro</b><small>Qué sabe, cómo preguntarle y un día con él</small></p></a>
+    <a href="#contexto"><span>29</span><p><b>Claude con el cerebro</b><small>Cómo trabajar con contexto de todo</small></p></a>
+    <a href="#orquestar"><span>30</span><p><b>Cómo orquestar a las IA</b><small>El tutorial paso a paso, con prompts</small></p></a>
+    <a href="#idea"><span>31</span><p><b>Una idea en pausa</b><small>Charlas para empresas, que también se pueden cobrar</small></p></a>
+    <a href="#fallas"><span>32</span><p><b>Cuando algo falla</b><small>Qué hacer en cada caso</small></p></a>
+    <a href="#aprendimos"><span>33</span><p><b>Lo que aprendimos</b><small>Errores que ya no se repiten</small></p></a>
+    <a href="#donde"><span>34</span><p><b>Dónde está cada cosa</b><small>Carpetas, planillas y links</small></p></a>
+    <a href="#glosario"><span>35</span><p><b>Glosario</b><small>Las palabras difíciles, explicadas</small></p></a>
+    <a href="#tareas"><span>36</span><p><b>Las tareas de Romina</b><small>Al terminar de leer: todo lo que falta, día por día</small></p></a>
   </div>
 </section>
 
@@ -451,7 +457,7 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg> El contenido</h4><p class="txt">Video, fotos o una nota de cada aparición.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg> Los números</h4><p class="txt">Cada lunes, cuánto se avanzó.</p></div>
   </div>
-  <div class="caja bien"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><span class="tit">No estás sola</span><p>Claude hace lo repetitivo, Alan decide lo que toca su agenda y este manual responde casi todo. Empezá por tu rol (capítulo 2), los accesos directos (9) y las tareas del lunes (34).</p></div></div>
+  <div class="caja bien"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><span class="tit">No estás sola</span><p>Claude hace lo repetitivo, Alan decide lo que toca su agenda y este manual responde casi todo. Empezá por tu rol (capítulo 2), los accesos directos (9) y las tareas del lunes (36).</p></div></div>
 </section>
 
 <!-- ================= rol ================= -->
@@ -460,7 +466,7 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> Tus responsabilidades</h3>
   <div class="g2">
     <div class="regla"><div class="num">1</div><div><h4>Conseguir escenarios</h4><p>Buscar eventos, clases, paneles<span class="def">(una charla de varias personas en el escenario)</span>, jurados<span class="def">(quien evalúa proyectos en un concurso)</span> y mentorías<span class="def">(aconsejar a emprendedores)</span>, y escribirles con el estilo aprobado. Claude busca y escribe; vos decidís y mandás.</p></div></div>
-    <div class="regla"><div class="num">2</div><div><h4>Llevar los podcasts y los medios</h4><p>Proponer a Alan como entrevistado, coordinar las grabaciones y las notas, y responderle a cada medio que se interese (capítulo 15).</p></div></div>
+    <div class="regla"><div class="num">2</div><div><h4>Llevar los podcasts y los medios</h4><p>Proponer a Alan como entrevistado, coordinar las grabaciones y las notas, y responderle a cada medio que se interese (capítulo 16).</p></div></div>
     <div class="regla"><div class="num">3</div><div><h4>Responder y hacer el seguimiento</h4><p>Contestar en el día a todos los que escriben, y volver a escribirle cada 2 días a quien no respondió.</p></div></div>
     <div class="regla"><div class="num">4</div><div><h4>Cuidar la agenda pública de Alan</h4><p>Proponer fechas, confirmarlas con su OK y que nada se pise: con el viaje y un margen antes y después.</p></div></div>
     <div class="regla"><div class="num">5</div><div><h4>Preparar a Alan</h4><p>Antes de cada evento o grabación, la ficha<span class="def">(el resumen de un evento o una grabación para Alan)</span> con lo que tiene que saber: quién organiza, dónde, cuándo, qué público y de qué se habla.</p></div></div>
@@ -504,10 +510,10 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
   <div class="g3 mapa">
     <div class="card lila"><h4>Para arrancar</h4><p class="txt">Bienvenida, tu rol, este capítulo y quién es Alan (1 a 4).</p></div>
     <div class="card lila"><h4>Cómo trabajamos</h4><p class="txt">El objetivo, las reglas, la metodología y los consejos (5 a 8).</p></div>
-    <div class="card lila"><h4>Los tres frentes</h4><p class="txt">Los accesos, la historia que vende, eventos, podcasts y prensa (9 a 15).</p></div>
-    <div class="card lila"><h4>Cada día</h4><p class="txt">Seguimiento, cómo se manda, la semana, los números y los logros (16 a 20).</p></div>
-    <div class="card lila"><h4>Herramientas</h4><p class="txt">Claude, skills, rutinas, GitHub, el cerebro y cómo orquestar a las IA (21 a 28).</p></div>
-    <div class="card lila"><h4>Para consultar, y al final</h4><p class="txt">La idea en pausa, fallas, lo aprendido, dónde está todo, el glosario y tus tareas (29 a 34).</p></div>
+    <div class="card lila"><h4>Los tres frentes</h4><p class="txt">Los accesos, la historia que vende, eventos, el día del evento, podcasts y prensa (9 a 16).</p></div>
+    <div class="card lila"><h4>Cada día</h4><p class="txt">Seguimiento, cómo se manda, la semana, lo que viene después, los números y los logros (17 a 22).</p></div>
+    <div class="card lila"><h4>Herramientas</h4><p class="txt">Claude, skills, rutinas, GitHub, el cerebro y cómo orquestar a las IA (23 a 30).</p></div>
+    <div class="card lila"><h4>Para consultar, y al final</h4><p class="txt">La idea en pausa, fallas, lo aprendido, dónde está todo, el glosario y tus tareas (31 a 36).</p></div>
   </div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg> Tres ideas para tener a mano</h3>
   <div class="tres-cajas">
@@ -571,6 +577,12 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.8 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.5 0-2.7-.6-3.2-1.7M12 6v2M12 16v2"/></svg> La plata, de día</h4><p class="txt">No habla de plata de noche: «es mi filosofía» (10/10). Si alguien ofrece pagar una charla, se le consulta de día.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 16a4 4 0 0 1 4-4h10"/></svg> Castellano llano</h4><p class="txt">Sin palabras en inglés ni vueltas. Así quiere que le escriban y así se escribe en su nombre.</p></div>
   </div>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Si le redactás algo para que lo mande él</h3>
+  <p>Lo que firmás vos va con tu estilo y firmado «Equipo de Alan Tapia». Pero a veces Alan te va a pedir un borrador para mandarlo él. Su forma de escribir está medida en el cerebro, sobre más de 19.000 mensajes:</p>
+  <div class="g2">
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> Por WhatsApp</h4><p class="txt">Corto, de una o dos líneas, y con voseo. Con gente que conoce abre con el nombre y «querido» («Nombre querido!»). Casi no usa emojis ni signos de apertura. Lo largo lo manda en audio, no en texto.</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Por mail, con alguien nuevo</h4><p class="txt">Un escalón más formal: «Quedo atento» y «Saludos cordiales». Sin listas ni negritas: un texto largo con listas se nota que no lo escribió él.</p></div>
+  </div>
   <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></div><div><span class="tit">Lo que no se dice de él</span><p>Que es cordobés: no lo es, y lo aclaró él el 10/10. Tampoco rondas de inversión, cuánto valen sus empresas ni clientes con nombre que no publique su web. El resto está en «Lo que no se agrega» (capítulo 10).</p></div></div>
 </section>
 
@@ -578,6 +590,7 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
 <section class="cap" id="objetivo">
   <div class="apertura"><div class="n">05</div><div><h2>El objetivo</h2><p class="frase"><b>En una frase:</b> volumen. Muchos escenarios, grandes y chicos, y todos filmados.</p></div></div>
   <div class="objetivo"><span class="tit">Lo que pidió Alan el 11/10</span><p>Conseguir la mayor cantidad de <span>eventos</span>, <span>podcasts</span> y <span>contenido</span>, sin límites. Hacer todo lo posible.</p></div>
+  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg></div><div><span class="tit">Por qué tantos escenarios: la regla de la conversación (04/09)</span><p>Alan decidió no hablarle más a una cámara. Todo su contenido sale de conversaciones con otros: charlas, entrevistas, podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span> y notas. En sus palabras: «Yo nunca le hablo a la cámara (…) Y que todos mis videos sean en charlas. Entonces mi objetivo es conseguir la mayor cantidad de charlas para dar todo este contenido». Y el porqué: «No ven a un tipo creador de contenido, ven a un empresario». Por eso cada escenario que conseguís es también el video de la semana.</p></div></div>
   <figure class="foto-caja"><figcaption>Cada escenario suma dos veces: por la gente que lo escucha ahí y por el video que después se publica.</figcaption></figure>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg> Qué cuenta como un logro</h3>
   <div class="g3">
@@ -592,7 +605,7 @@ a:focus-visible{outline:2px solid var(--violeta);outline-offset:2px}
   <div class="tabla"><table>
     <thead><tr><th style="width:24%">Lugar</th><th style="width:22%">Cuándo</th><th>Qué buscamos</th></tr></thead>
     <tbody>
-      <tr><td>Córdoba</td><td>Hasta el 18/11</td><td>Es la base: eventos, universidades, cámaras, colegios, clubes y podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span>.</td></tr>
+      <tr><td>Córdoba</td><td>Hasta el 18/11</td><td>Es la base: eventos, universidades, cámaras, colegios, clubes y podcasts.</td></tr>
       <tr><td>Buenos Aires</td><td>La semana del 17/11</td><td>Universidades, cámaras, clubes, podcasts y los eventos de esa semana.</td></tr>
       <tr><td>Florianópolis</td><td>Del 22/11 a enero</td><td>En portugués: universidades, comunidades de tecnología y eventos de fin de año.</td></tr>
       <tr><td>Online<span class="def">(por internet, a distancia)</span></td><td>Cuando quieran</td><td>Podcasts y charlas virtuales, sobre todo para los que están lejos.</td></tr>
@@ -712,7 +725,7 @@ Agenda de Alan para grabar: martes [__] y miércoles [__].</div>
     <ul class="lista-x">
       <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Mensajes largos que nadie termina de leer</span></li>
       <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Decir que sí a una fecha antes de consultarla</span></li>
-      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Olvidarse del seguimiento (capítulo 16)</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Olvidarse del seguimiento (capítulo 17)</span></li>
       <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>No pedir el video ni las fotos después</span></li>
       <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Dejar algo sin anotar «para después»</span></li>
     </ul></div>
@@ -728,6 +741,17 @@ Agenda de Alan para grabar: martes [__] y miércoles [__].</div>
     </tbody>
   </table></div>
   <p class="chico">Es una sugerencia para ordenar la semana: lo que manda es lo que se acuerde con Alan cada lunes.</p>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Las reglas de Alan para quien trabaja con él</h3>
+  <p>Estas no son consejos de oficio: son cosas que Alan fue pidiendo a quienes trabajan para él, y están anotadas en su cerebro.</p>
+  <div class="g2">
+    <div class="regla"><div class="num">1</div><div><h4>Castellano llano</h4><p>«No entiendo inglés, hablame en español.» Nada de palabras en inglés ni de jerga. Si algo llega en inglés, va con la traducción.</p></div></div>
+    <div class="regla"><div class="num">2</div><div><h4>La causa, no sólo el problema</h4><p>Cuando algo sale mal, contale qué pasó, por qué pasó, qué hiciste y qué queda pendiente. Un parche se llama parche.</p></div></div>
+    <div class="regla"><div class="num">3</div><div><h4>«Revisá todo» es todo</h4><p>Cada cosa, no una muestra. Y se dice con el número: «revisé 11 de 11».</p></div></div>
+    <div class="regla"><div class="num">4</div><div><h4>Lo que ya decidió, no se le vuelve a traer</h4><p>Si Alan dijo que algo lo maneja él, no se le pregunta de nuevo en cada informe.</p></div></div>
+    <div class="regla"><div class="num">5</div><div><h4>Cálido y profesional, sin guiones largos</h4><p>En los textos, nunca el guion largo como pausa: delata que el texto lo escribió una máquina.</p></div></div>
+    <div class="regla"><div class="num">6</div><div><h4>Recordale antes</h4><p>Él mismo lo pide: «que me lo reafirmes unos días antes». Cada fecha, unos días antes y la noche anterior.</p></div></div>
+  </div>
+
 </section>
 
 <!-- ================= accesos ================= -->
@@ -963,6 +987,25 @@ Equipo de Alan Tapia</div>
     <div class="pod"><div class="cab"><b>Los 6 bots</b></div><p class="dijo">UCC, Mariano Moreno, EmprendeFest, Alta Gracia, Villa Carlos Paz y ADEC contestaron con programas automáticos. El de Carlos Paz pidió DNI y domicilio, que no se dieron.</p><p class="paso"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Pedir hablar con una persona. Nunca dar datos.</span></p></div>
   </div>
 
+  <div class="junto">
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Tu agenda del 07/10, y qué pasó con cada uno</h3>
+  <p>El 07/10 le mandaste a Alan tu agenda de octubre y noviembre: diez eventos. Es la lista que más vale, porque la armaste vos y es de primera mano. Así está cada uno en el CRM al 12/10:</p>
+  <div class="tabla"><table class="compacta">
+    <thead><tr><th style="width:12%">Fecha</th><th style="width:36%">Evento</th><th>Cómo está</th></tr></thead>
+    <tbody>
+      <tr><td>07/10</td><td>4° Encuentro Financiero (Bolsa de Comercio)</td><td>Se canceló.</td></tr>
+      <tr><td>08/10</td><td>Institución Cervantes, puertas<span class="def">(lugares concretos por donde Alan puede entrar)</span> abiertas</td><td>Ya pasó. Contale a Claude qué pasó, para anotarlo: Alan ya había hablado ahí en 2023.</td></tr>
+      <tr><td>20/10</td><td>15° Congreso de Mercado de Capitales</td><td>Como visitante. Queda para más adelante.</td></tr>
+      <tr><td>27/10</td><td>IA para PyMEs (Somos Pymes)</td><td>Descartado: los oradores ya estaban cerrados.</td></tr>
+      <tr><td>28/10</td><td>TCI Global Conference</td><td>Como visitante, para hacer contactos. Para más adelante.</td></tr>
+      <tr><td>29/10</td><td>La Cumbre Gastronómica</td><td>Le escribiste por mail; falta anotar la fecha en el CRM.</td></tr>
+      <tr><td>30/10</td><td>Ágiles Córdoba</td><td>Salió el mail el 10/10, con el PDF. Le toca seguimiento.</td></tr>
+      <tr><td>04/11</td><td>ImpulsAR (AJE Córdoba)</td><td>Salió la propuesta para El Código en vivo, adentro de ImpulsAR (mail y WhatsApp, 10/10).</td></tr>
+      <tr><td>05/11</td><td>Fiesta anual de la AAMF</td><td>Es una cena para socios en Buenos Aires: no hay escenario. Para más adelante.</td></tr>
+      <tr><td>12 y 13/11</td><td>Córdoba Tech Week</td><td>Salieron mail y WhatsApp el 10/10. Es la sala que más vale.</td></tr>
+    </tbody>
+  </table></div></div>
+
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> Los formularios que tenés que llenar</h3>
   <div class="tabla"><table>
     <thead><tr><th style="width:28%">Formulario</th><th>Para qué</th><th style="width:33%">Dónde</th></tr></thead>
@@ -975,6 +1018,37 @@ Equipo de Alan Tapia</div>
       <tr><td>AWS Community Day</td><td>Opcional: la convocatoria de oradores (07/11).</td><td>Su sitio</td></tr>
     </tbody>
   </table></div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg> Qué público le sirve a Alan</h3>
+  <p>Todo escenario suma (la regla es «sin límites»), pero no todos suman igual. Los que más valen son los que tienen en la sala a alguien que puede comprarle a una de sus empresas o abrirle otra puerta:</p>
+  <div class="tabla"><table class="compacta">
+    <thead><tr><th style="width:34%">En la sala hay…</th><th>Por qué le sirve</th></tr></thead>
+    <tbody>
+      <tr><td>Dueños y gerentes de cadenas gastronómicas y franquicias</td><td>Pueden ser clientes de Deenex.</td></tr>
+      <tr><td>Dueños y gerentes de empresas medianas y grandes</td><td>Pueden necesitar el software y la IA de Xnod.</td></tr>
+      <tr><td>Inmobiliarias y corredores</td><td>Son el público de MyAlquiler, y Alan ya habló en sus colegios.</td></tr>
+      <tr><td>Cámaras y centros comerciales</td><td>Juntan a muchos dueños de una vez, y recomiendan.</td></tr>
+      <tr><td>Estudiantes, emprendedores y comunidades</td><td>Visibilidad y contenido: es donde su historia más impacta.</td></tr>
+    </tbody>
+  </table></div>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg> Antes de decir que sí: tres preguntas</h3>
+  <div class="g3">
+    <div class="regla"><div class="num">1</div><div><h4>¿Quién va a estar?</h4><p>Si podés nombrar a alguien de la sala que puede comprar o abrir una puerta, mejor. Si dos eventos caen el mismo día, gana ése.</p></div></div>
+    <div class="regla"><div class="num">2</div><div><h4>¿Con quién comparte cartel?</h4><p>Mirá la grilla, o los últimos cinco episodios si es un podcast<span class="def">(un programa de entrevistas que se publica en internet)</span>. Si hay coaches, gurúes o vendedores de fórmulas, no va: es una regla de marca de Alan, escrita en mayo.</p></div></div>
+    <div class="regla"><div class="num">3</div><div><h4>¿Hay preguntas del público?</h4><p>Es donde Alan se luce y donde aparecen los contactos. Preguntá si hay un rato de preguntas y cuántos minutos dura.</p></div></div>
+  </div>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> Cómo buscar eventos nuevos</h3>
+  <div class="g2">
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> Dónde buscar</h4><ul>
+      <li>Las agendas de las cámaras, los colegios profesionales y los clústeres.</li>
+      <li>Universidades: centros de emprendedores, secretarías de extensión<span class="def">(un agregado del navegador)</span> y cátedras de negocios.</li>
+      <li>Plataformas de eventos: Eventbrite, Meetup y Luma, y los eventos de LinkedIn.</li>
+      <li>Convocatorias a oradores («call for speakers»), premios y concursos que buscan jurado.</li>
+      <li>La agenda de los medios de negocios de cada ciudad (capítulo 16).</li>
+    </ul></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg> El pedido a Claude</h4><div class="prompt">Buscá [tipo de evento] en [ciudad] entre el [fecha] y el [fecha]. Para cada uno: fecha confirmada, sede, quién organiza y el contacto publicado en su sitio oficial, con el link. Nada de Instagram. Abrí cada link para ver que exista, y no repitas lo que ya está en el CRM.</div></div>
+  </div>
+  <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18h.01"/></svg></div><div><span class="tit">Las IA de chat a veces inventan</span><p>ChatGPT, Gemini o el mismo Claude sin buscar en internet pueden devolver links, teléfonos y mails que parecen reales y no existen. Un mail inventado no rebota<span class="def">(el mail vuelve porque la dirección no existe)</span> a la vista: el mensaje se pierde y nadie se entera. Por eso cada contacto se mira en el sitio oficial del organizador antes de escribirle.</p></div></div>
 
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Las fechas que mandan</h3>
   <div class="fechas">
@@ -1062,9 +1136,70 @@ Equipo de Alan Tapia</div></div>
   </div>
 </section>
 
+<section class="cap" id="diaevento">
+  <div class="apertura"><div class="n">13</div><div><h2>El día del evento</h2><p class="frase"><b>En una frase:</b> una charla se prepara antes, se aprovecha durante y se cosecha después. Lo de después es lo que más se olvida, y es lo que más deja.</p></div></div>
+  <div class="momentos">
+    <div class="momento"><b>Al confirmar</b><span>Las preguntas de la ficha y el pedido del video.</span></div>
+    <div class="momento"><b>La semana antes</b><span>El equipo de filmación, la difusión y el calendario.</span></div>
+    <div class="momento"><b>El día anterior</b><span>La ficha a Alan y la confirmación con el organizador.</span></div>
+    <div class="momento"><b>El día</b><span>Llegar antes, filmar todo y anotar quién estaba.</span></div>
+    <div class="momento"><b>Las 48 horas</b><span>Gracias, material, recorte publicado y todo anotado.</span></div>
+  </div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg> Al confirmar</h3>
+  <div class="tareas"><div class="cab"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg> Lo que tiene que quedar claro</div><ul>
+    <li><span><b>Día, hora, lugar y duración</b><span class="det">Y a qué hora tiene que llegar Alan.</span></span></li>
+    <li><span><b>Qué público va</b><span class="det">Quiénes y cuántos, más o menos.</span></span></li>
+    <li><span><b>Que se pueda filmar</b><span class="det">Y si hay algún momento o lugar donde no.</span></span></li>
+    <li><span><b>Si hay preguntas del público</b><span class="det">Y cuántos minutos.</span></span></li>
+    <li><span><b>Qué necesita Alan</b><span class="det">Pantalla, proyector, micrófono.</span></span></li>
+    <li><span><b>Quién lo recibe ese día</b><span class="det">Nombre y teléfono.</span></span></li>
+  </ul></div>
+  <div class="g2">
+    <div class="junto"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg> Si el que graba es el organizador</h4>
+      <p>Pasa sobre todo en los podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span> y en los eventos grandes. Lo que conviene pedir es el crudo (el video completo, sin editar) de la parte de Alan, y permiso para publicar un recorte propio. Se pide en la confirmación, no después: antes es una condición, después es un favor.</p></div>
+    <div class="junto"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> La frase, lista para copiar</h4>
+      <div class="wa"><span class="quien">Romina</span><div class="burbuja">¡Confirmado, muchas gracias! Una sola cosa: si graban, ¿nos pasarían el material crudo de la parte de Alan y podemos publicar un recorte propio? Los etiquetamos y linkeamos el video completo. ¡Gracias! Romina, del equipo de Alan Tapia<span class="hora">10:00 ✓✓</span></div></div></div>
+  </div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> La semana antes</h3>
+  <div class="g2">
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg> Avisarle al equipo de filmación</h4><p class="txt">Los dos filmmakers, el fotógrafo y el community manager: día, hora, dirección, cuánto dura y qué conviene filmar. Que confirmen quién va.</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> El calendario de Alan</h4><p class="txt">En rojo si es presencial, con el viaje agendado para que llegue 10 minutos antes y un bloque de vuelta al terminar (capítulo 28).</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg> La difusión</h4><p class="txt">Pedile al organizador el flyer o la publicación donde nombran a Alan, para compartirla. Si el evento es grande, avisarles a los medios de esa ciudad (capítulo 16).</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> El CRM</h4><p class="txt">El evento en «Confirmado», con la fecha y el contacto de ese día.</p></div>
+  </div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> El día anterior</h3>
+  <p>La ficha<span class="def">(el resumen de un evento o una grabación para Alan)</span> a Alan a la noche (el modelo está en el capítulo 12) y un mensaje corto al organizador: «¡Mañana nos vemos! Alan llega a las [hora]. Cualquier cambio, avisame por acá».</p>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> El día</h3>
+  <div class="g2">
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg> Qué se filma</h4><ul>
+      <li>La charla entera, de principio a fin.</li>
+      <li>Las preguntas del público y las respuestas.</li>
+      <li>Fotos de Alan en el escenario, con el público y con el organizador.</li>
+      <li>El cartel o el logo del evento, para «Dónde habló».</li>
+    </ul></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Quién estaba</h4><p class="txt">Anotá nombre, empresa y cargo de cada persona que se acerque a Alan o haga una pregunta. Es lo mismo que ya hiciste recibiendo gente en la puerta: de esa lista salen los contactos que deja cada charla.</p></div>
+  </div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9-8.6C1.6 8.1 3.6 5 6.8 5c2 0 3.3 1.1 4.2 2.4C11.9 6.1 13.2 5 15.2 5c3.2 0 5.2 3.1 3.8 6.4C19 15.6 12 20 12 20z"/></svg> Las 48 horas después</h3>
+  <div class="tareas"><div class="cab"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg> En orden</div><ul>
+    <li><span><b>El mismo día: el gracias al organizador</b><span class="det">Y pedile las fotos, el video o el crudo.</span></span></li>
+    <li><span><b>A las 24 horas: un mensaje a cada persona de la lista</b><span class="det">De parte del equipo de Alan, con el contacto para seguir la charla.</span></span></li>
+    <li><span><b>A las 24 horas: el crudo, otra vez</b><span class="det">Si no llegó, se pide de nuevo.</span></span></li>
+    <li><span><b>A las 48 horas: el recorte publicado</b><span class="det">Un video corto con lo mejor, que arma y publica el community manager.</span></span></li>
+    <li><span><b>Sumarlo a «Dónde habló»</b><span class="det">En la página y en el PDF de Alan, con la fecha (se lo pedís a Claude).</span></span></li>
+    <li><span><b>Anotarlo todo</b><span class="det">En el CRM: el evento como hecho y cada contacto nuevo con el nombre de la charla de la que salió. Y en el cerebro: la sala, la fecha y quién estaba.</span></span></li>
+  </ul></div>
+  <div class="caja bien"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><span class="tit">Qué se mide de cada charla</span><p>Cuántas personas de esa sala terminan siendo un contacto, y cuántas veces se vio el recorte. Por eso cada contacto nuevo se anota con el nombre de la charla de la que salió.</p></div></div>
+  <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div><div><span class="tit">El primero es el sábado 17/10</span><p>Alan va invitado a Cuna de Emprendedores. No da una charla, pero sirve para practicar esta lista: confirmar horario y lugar, avisarle al equipo, las fotos, quién estaba y el gracias.</p></div></div>
+</section>
+
 <!-- ================= podcasts ================= -->
 <section class="cap" id="podcasts">
-  <div class="apertura"><div class="n">13</div><div><h2>Podcasts</h2><p class="frase"><b>En una frase:</b> el segundo frente, y se lleva aparte. Acá Alan no da una charla: es el entrevistado.</p></div></div>
+  <div class="apertura"><div class="n">14</div><div><h2>Podcasts</h2><p class="frase"><b>En una frase:</b> el segundo frente, y se lleva aparte. Acá Alan no da una charla: es el entrevistado.</p></div></div>
   <div class="botones"><a class="boton" href="https://drive.google.com/drive/search?q=Prensa%20y%20oradores"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Abrir el CRM de podcasts</a><a class="boton" href="https://soyalantapia.github.io/alan-tapia/kit.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> El kit para podcasts</a><a class="boton" href="#hablarpodcasts"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> Cómo hablar con un podcast</a></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> Qué es un podcast y por qué sirve</h3>
   <p>Un <b>podcast</b> es un programa de entrevistas que se graba en audio o en video y se publica en internet (YouTube, Spotify, Apple Podcasts). Para Alan sirve mucho: la entrevista queda publicada, la ve gente de todo el país y se puede cortar en videos cortos para sus redes. Muchos se graban online<span class="def">(por internet, a distancia)</span>, así que la distancia no importa.</p>
@@ -1112,7 +1247,7 @@ Equipo de Alan Tapia</div></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg> Dijeron que no</h4><p class="txt">Hablemos de Negocios (cobra), InspirAcción, Primera Reunión, Charlas de Brokers y Acento Global.</p></div>
   </div>
   <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div><div><span class="tit">Las grabaciones, martes o miércoles</span><p>Pedido de Alan (11/10): las grabaciones de podcast van en la semana, de lunes a viernes, y se concentran los martes y miércoles. Antes de proponer o confirmar una fecha, mirá la agenda de Alan de esos días. A los que ya propusieron un día, se les recoordina. Protagonistas Córdoba (martes 20/10) ya cae bien.</p></div></div>
-  <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div><div><span class="tit">Más de 70 siguen sin respuesta</span><p>Les toca seguimiento cada 2 días, con el modelo de podcasts (capítulo 16). Rebotaron Instinto Fundador, Pocas Pulgas, Mentor Gómez, EntreprenUp y tres casillas más del 08/10.</p></div></div>
+  <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div><div><span class="tit">Más de 70 siguen sin respuesta</span><p>Les toca seguimiento cada 2 días, con el modelo de podcasts (capítulo 17). Rebotaron Instinto Fundador, Pocas Pulgas, Mentor Gómez, EntreprenUp y tres casillas más del 08/10.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Dónde vive todo esto</h3>
   <p>En el <b>CRM de podcasts</b>, una planilla de Google en la carpeta «Prensa y oradores · Alan Tapia» de Google Drive. Las columnas que más se usan son Estado (E), Próximo paso (F), Enviado (AJ), Respuesta (AM) y Prioridad (AR). Para editarla, Chrome tiene que estar al frente: con la pestaña escondida no acepta lo que se escribe.</p>
   <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></div><div><span class="tit">La rutina de los podcasts</span><ol style="margin:0">
@@ -1125,7 +1260,7 @@ Equipo de Alan Tapia</div></div>
 
 <!-- ================= hablarpodcasts ================= -->
 <section class="cap" id="hablarpodcasts">
-  <div class="apertura"><div class="n">14</div><div><h2>Cómo hablar con un podcast</h2><p class="frase"><b>En una frase:</b> en un podcast Alan es el invitado. Lo que se arregla es el día, el formato y de qué se habla, y lo que más vale es su historia.</p></div></div>
+  <div class="apertura"><div class="n">15</div><div><h2>Cómo hablar con un podcast</h2><p class="frase"><b>En una frase:</b> en un podcast Alan es el invitado. Lo que se arregla es el día, el formato y de qué se habla, y lo que más vale es su historia.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> La conversación, en cinco momentos</h3>
   <div class="momentos">
     <div class="momento"><b>La propuesta</b><span>«Idea de invitado para [podcast]», con un episodio suyo como gancho. Ya salió.</span></div>
@@ -1183,7 +1318,7 @@ Equipo de Alan Tapia</div></div>
 
 <!-- ================= prensa ================= -->
 <section class="cap" id="prensa">
-  <div class="apertura"><div class="n">15</div><div><h2>Prensa y medios</h2><p class="frase"><b>En una frase:</b> el tercer frente. Que diarios, radios, canales y sitios de noticias hablen de Alan, y que cada nota quede como prueba para el próximo escenario.</p></div></div>
+  <div class="apertura"><div class="n">16</div><div><h2>Prensa y medios</h2><p class="frase"><b>En una frase:</b> el tercer frente. Que diarios, radios, canales y sitios de noticias hablen de Alan, y que cada nota quede como prueba para el próximo escenario.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7M7 17h4"/></svg> Qué es la prensa, y en qué se diferencia</h3>
   <div class="g3">
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> Un evento</h4><p class="txt">Alan habla frente a un público. Lo invita quien organiza.</p></div>
@@ -1218,6 +1353,27 @@ Equipo de Alan Tapia</div></div>
     </tbody>
   </table></div>
   </div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> El mapa de medios: por dónde empezar</h3>
+  <p>No se le escribe al medio: se le escribe al periodista que cubre el tema (regla 1, más abajo). Para encontrarlo, se abren las últimas notas de la sección y se mira quién las firma. Su contacto se busca en el sitio del medio o en su perfil profesional.</p>
+  <div class="tabla"><table class="compacta">
+    <thead><tr><th style="width:18%">Dónde</th><th style="width:34%">Medio</th><th>Qué sección mirar</th></tr></thead>
+    <tbody>
+      <tr><td>Córdoba</td><td>InfoNegocios</td><td>Negocios y empresas de Córdoba. Ya publicó una nota sobre Deenex (24/09).</td></tr>
+      <tr><td>Córdoba</td><td>La Voz del Interior</td><td>Economía y negocios, y tecnología.</td></tr>
+      <tr><td>Córdoba</td><td>Hoy Día Córdoba</td><td>Economía: cubre emprendedores y eventos de negocios de la ciudad.</td></tr>
+      <tr><td>Córdoba</td><td>Comercio y Justicia</td><td>Diario de economía y empresas.</td></tr>
+      <tr><td>Córdoba</td><td>Punto a Punto</td><td>Revista de negocios. Organiza el premio Empresario del Año (está en tus tareas).</td></tr>
+      <tr><td>Córdoba</td><td>Cadena 3</td><td>Radio: programas de economía y de la mañana.</td></tr>
+      <tr><td>Buenos Aires</td><td>iProUP</td><td>Startups y tecnología. Ya publicó una nota sobre Deenex (24/04).</td></tr>
+      <tr><td>Buenos Aires</td><td>El Cronista</td><td>Pymes, negocios y su streaming. Alan ya estuvo en «Cuentas Claras».</td></tr>
+      <tr><td>Buenos Aires</td><td>Infobae, La Nación y Clarín</td><td>Economía, tecnología y emprendedores. Son los más grandes: primero conviene sumar notas en los medios chicos.</td></tr>
+      <tr><td>Buenos Aires</td><td>Forbes Argentina</td><td>Negocios y pymes. Ya nombró a Deenex en un reporte de pymes (27/06/2025).</td></tr>
+      <tr><td>Florianópolis</td><td>NSC Total y ND+</td><td>Economía, tecnología y startups de Santa Catarina. En portugués.</td></tr>
+      <tr><td>Brasil</td><td>Startupi y Startups.com.br</td><td>Medios del ecosistema emprendedor. Cubren mucho a Florianópolis, que es «Capital Nacional de las Startups» por ley.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Es un punto de partida: antes de escribir, se confirma la sección y el periodista en el sitio de cada medio. Para sumar más, se le pide a Claude: «Armá la lista de periodistas que cubren [tema] en [ciudad], con la nota de cada uno que leíste y de dónde sacaste el contacto».</p>
 
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg> De qué puede hablar Alan con un periodista</h3>
   <div class="g2">
@@ -1303,12 +1459,22 @@ Equipo de Alan Tapia</div></div>
     <li><span><b>Pasársela al community manager<span class="def">(quien maneja las redes sociales)</span></b><span class="det">Para que la comparta en las redes de Alan.</span></span></li>
     <li><span><b>Sumarla a «Dónde salió»</b><span class="det">Pedile a Claude que la agregue a la página y al PDF de Alan, con la fecha.</span></span></li>
   </ul></div>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg> Lo que hicieron otros para hacerse conocidos</h3>
+  <p>En el cerebro de Alan hay un estudio de trece casos de empresarios que se hicieron conocidos, en la Argentina y afuera, y otro del argentino Mateo Salvatto. Lo que tienen en común:</p>
+  <div class="g2">
+    <div class="regla"><div class="num">1</div><div><h4>Primero el hacer, después la prensa</h4><p>Ninguno se hizo conocido hablando de sí mismo. Primero hicieron algo, después tuvieron un dato o un logro para contar, y recién ahí llegó la prensa.</p></div></div>
+    <div class="regla"><div class="num">2</div><div><h4>Una historia, contada siempre igual</h4><p>Corta, con un giro, y repetida igual en cada escenario. Es trabajo de guion, no de suerte.</p></div></div>
+    <div class="regla"><div class="num">3</div><div><h4>Constancia antes que una gran nota</h4><p>Aparecer seguido le gana a una aparición brillante. La prensa cita a quien ya vio varias veces.</p></div></div>
+    <div class="regla"><div class="num">4</div><div><h4>Escenarios ajenos antes que audiencia propia</h4><p>Hablar en los escenarios de otros es más rápido y más barato que armar una audiencia de cero. Es exactamente lo que hace este proyecto.</p></div></div>
+  </div>
+  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><div><span class="tit">El caso de Mateo Salvatto</span><p>A los 18 años dio una charla TEDx<span class="def">(charlas independientes con el formato TED)</span> que tiene más de 478.000 reproducciones. Desde 2020 los titulares dejaron de hablar de su app y empezaron a citar frases suyas entre comillas, y en 2021 sumó un libro y una columna semanal en una radio. Esa es la meta para Alan: que los medios lo citen a él.</p></div></div>
+
   <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 16a4 4 0 0 1 4-4h10"/></svg></div><div><span class="tit">De dónde viene esto</span><p>El trabajo de prensa empezó el 02/10 en otra conversación de Claude, «Gerente de prensa». De ahí salieron la página de Alan, el kit y el PDF. Para retomarlo, pedile a Claude: «Leé la memoria gerente-de-prensa-de-alan y decime qué quedó pendiente en prensa».</p></div></div>
 </section>
 
 <!-- ================= seguimiento ================= -->
 <section class="cap" id="seguimiento">
-  <div class="apertura"><div class="n">16</div><div><h2>El seguimiento</h2><p class="frase"><b>En una frase:</b> volver a escribirle a quien todavía no contestó. Es la tarea que más resultados da, y la más fácil de olvidar.</p></div></div>
+  <div class="apertura"><div class="n">17</div><div><h2>El seguimiento</h2><p class="frase"><b>En una frase:</b> volver a escribirle a quien todavía no contestó. Es la tarea que más resultados da, y la más fácil de olvidar.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> Por qué hace falta</h3>
   <p>Casi nadie contesta el primer mensaje, y no porque no les interese: lo leyeron en el celular y se les pasó, les llegó a la casilla<span class="def">(una dirección de mail con su bandeja)</span> equivocada o lo tienen que consultar con otra persona. El seguimiento les recuerda que estamos, con educación y sin insistir de más. Pensalo como cuando un cliente dice «después vuelvo»: si nadie lo vuelve a buscar, no vuelve.</p>
   <div class="regla-grande"><span class="tit">La regla de Alan · 11/10</span><p>Cada 2 días, seguimiento a todos los que no respondieron, hasta que contesten.</p></div>
@@ -1338,7 +1504,7 @@ Equipo de Alan Tapia</div></div>
   <div class="dia"><div class="fecha"><span>Lunes</span><b>19/10</b></div><div class="que">Lo del jueves (1.º), lo del martes y el miércoles (2.º), lo del lunes (3.º), lo del sábado (4.º) y los podcasts.</div><div class="cuantos"><div><b>518</b>mails</div><div><b>95</b>WhatsApp</div></div></div>
   </div>
   <p>En la planilla, cada fila tiene la columna <b>«Seguimientos si no responde»</b> con sus fechas. Para saber a quién le toca hoy: abrir la hoja del día en que salió el mensaje y filtrar «Estado» = Enviado.</p>
-  <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M8 19v2M16 19v2"/></svg></div><div><span class="tit">Con este volumen, Claude ayuda a mandar</span><p>Cientos de seguimientos por día no se pueden copiar y pegar a mano. Se le pide a Claude que los arme y los mande desde la casilla con Chrome conectado, de a bloques, y Romina revisa y aprueba. El prompt<span class="def">(el pedido que se le escribe a Claude)</span> está en el capítulo 28.</p></div></div>
+  <div class="caja ojo"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M8 19v2M16 19v2"/></svg></div><div><span class="tit">Con este volumen, Claude ayuda a mandar</span><p>Cientos de seguimientos por día no se pueden copiar y pegar a mano. Se le pide a Claude que los arme y los mande desde la casilla con Chrome conectado, de a bloques, y Romina revisa y aprueba. El prompt<span class="def">(el pedido que se le escribe a Claude)</span> está en el capítulo 30.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Los modelos de seguimiento</h3>
   <p>Están también en la hoja «Seguimientos» de la planilla, listos para copiar. Lo que va entre corchetes se reemplaza, y Romina los puede ajustar.</p>
   <div class="g2">
@@ -1395,7 +1561,7 @@ Equipe de Alan Tapia</div></div>
 
 <!-- ================= mandar ================= -->
 <section class="cap" id="mandar">
-  <div class="apertura"><div class="n">17</div><div><h2>Cómo se manda, paso a paso</h2><p class="frase"><b>En una frase:</b> la planilla dice qué, a quién y con qué texto; el webmail y WhatsApp hacen el resto.</p></div></div>
+  <div class="apertura"><div class="n">18</div><div><h2>Cómo se manda, paso a paso</h2><p class="frase"><b>En una frase:</b> la planilla dice qué, a quién y con qué texto; el webmail y WhatsApp hacen el resto.</p></div></div>
   <div class="botones"><a class="boton" href="https://mail.hostinger.com/"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Abrir tu casilla</a><a class="boton" href="https://web.whatsapp.com/"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> Abrir WhatsApp Web</a></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> La planilla «Envíos de la semana»</h3>
   <p>Está en el Escritorio, en la carpeta <b>Envíos semana 12-10</b>. Tiene una hoja por día (las pestañas de abajo), más «Seguimientos», «En espera» y «Todos». Cada fila es un mensaje.</p>
@@ -1447,7 +1613,7 @@ Equipe de Alan Tapia</div></div>
 
 <!-- ================= semana ================= -->
 <section class="cap" id="semana">
-  <div class="apertura"><div class="n">18</div><div><h2>La semana: todo sale antes del viernes</h2><p class="frase"><b>En una frase:</b> del lunes 12 al jueves 15/10 salen los 509 mails y los 67 WhatsApp. El viernes queda de reserva.</p></div></div>
+  <div class="apertura"><div class="n">19</div><div><h2>La semana: todo sale antes del viernes</h2><p class="frase"><b>En una frase:</b> del lunes 12 al jueves 15/10 salen los 509 mails y los 67 WhatsApp. El viernes queda de reserva.</p></div></div>
   <div class="regla-grande"><span class="tit">Lo que pidió Alan · 11/10</span><p>Todos los mensajes salen antes del viernes 16/10, sí o sí.</p></div>
   <p>El viernes 16/10 queda de <b>reserva</b>: para lo que haya fallado (un rebote, un número que no existe, un día que no se terminó) y para los seguimientos<span class="def">(volver a escribirle a quien no respondió)</span>. Además, <b>antes del miércoles 14/10 todos los que nos escribieron tienen que tener nuestra respuesta.</b></p>
   <div class="dia"><div class="fecha"><span>Lunes</span><b>12/10</b></div><div class="que">Eventos del CRM: Córdoba, Buenos Aires y Brasil (en portugués), y las 4 respuestas a podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span>. Antes, los seguimientos del sábado.</div><div class="cuantos"><div><b>84</b>mails</div><div><b>22</b>WhatsApp</div></div></div>
@@ -1474,9 +1640,46 @@ Equipe de Alan Tapia</div></div>
   </ol>
 </section>
 
+<section class="cap" id="despues">
+  <div class="apertura"><div class="n">20</div><div><h2>Después del viernes: las semanas que vienen</h2><p class="frase"><b>En una frase:</b> el viernes 16/10 sale todo. Desde el lunes 19/10 el trabajo cambia: menos mensajes nuevos y más conversaciones, fechas que confirmar y eventos que preparar.</p></div></div>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> Qué cambia en tu semana</h3>
+  <div class="g2">
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> Responder primero</h4><p class="txt">Con cientos de mensajes afuera, cada día van a entrar respuestas. Se contestan en el día, antes que cualquier otra cosa.</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> Seguimientos lunes, miércoles y viernes</h4><p class="txt">Desde el 19/10 se agrupan en esos tres días (capítulo 17).</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Cada fecha confirmada, su lista</h4><p class="txt">Cada evento que se confirma pasa por la lista del día del evento (capítulo 13).</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> Buscar más, una vez por semana</h4><p class="txt">Los jueves, eventos, convocatorias<span class="def">(un llamado abierto para anotarse)</span> y podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span> nuevos, sin repetir lo del CRM<span class="def">(la planilla donde se anota cada contacto, qué se le mandó y qué respondió)</span>.</p></div>
+  </div>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> La segunda vuelta</h3>
+  <p>A quien no respondió después de tres seguimientos<span class="def">(volver a escribirle a quien no respondió)</span> no se le escribe lo mismo una cuarta vez. Se prueba otro camino:</p>
+  <ul class="lista-ok">
+    <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Otro canal:</b> WhatsApp si fue por mail, o al revés.</span></li>
+    <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Otra persona</b> de la misma organización, con su contacto oficial.</span></li>
+    <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Otro formato:</b> una clase, un panel<span class="def">(una charla de varias personas en el escenario)</span>, algo virtual o la edición<span class="def">(cada vez que se hace un evento que se repite)</span> del año que viene.</span></li>
+    <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Una llamada,</b> si hay teléfono publicado.</span></li>
+    <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Para más adelante:</b> se anota en el CRM cuándo volver a escribir, con la fecha.</span></li>
+  </ul>
+
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Semana por semana</h3>
+  <p>Los eventos de la tabla son fechas del calendario, no charlas confirmadas: lo que se confirma se marca en el CRM.</p>
+  <div class="tabla"><table>
+    <thead><tr><th style="width:20%">Cuándo</th><th style="width:40%">Qué pasa</th><th>Qué te toca</th></tr></thead>
+    <tbody>
+      <tr><td>19 al 23/10</td><td>Martes 20/10, la grabación propuesta en Protagonistas Córdoba. Jueves 22/10, FreyreImpulsa. Del 23 al 25/10, la Cumbre de Emprendedores Evolutivos.</td><td>Responder, confirmar fechas y la ficha<span class="def">(el resumen de un evento o una grabación para Alan)</span> de cada grabación.</td></tr>
+      <tr><td>26/10 al 06/11</td><td>Ágiles Córdoba (30 y 31/10). Cierra Diez Jóvenes Sobresalientes (30/10). ImpulsAR y la jornada de Económicas (04/11). Ideatón de Villa María (05/11).</td><td>La segunda vuelta a los que no respondieron. Buscar escenarios para la semana de Buenos Aires.</td></tr>
+      <tr><td>09 al 18/11</td><td>Sembrando Empresarios (10 al 12/11). Córdoba Tech Week (12 y 13/11). NASA Space Apps (13 al 15/11). Último día de Alan en Córdoba (18/11, a confirmar).</td><td>Avisar a los medios de Córdoba antes de cada charla grande. Cerrar lo que quede de Córdoba.</td></tr>
+      <tr><td>16 al 27/11</td><td>Buenos Aires: la Argentina Capital Week (16 al 20/11, con el RepensAR Summit el 19/11) y las universidades.</td><td>Confirmar las fechas exactas de Buenos Aires con Alan.</td></tr>
+      <tr><td>Desde el 22/11</td><td>Florianópolis: la Closing Week de Founder Haus (23 al 28/11) y las clases en la UFSC y la UDESC (hasta el 04/12).</td><td>Todo en portugués, con el PDF en portugués.</td></tr>
+      <tr><td>Diciembre</td><td>Fiestas de fin de año de cámaras y comunidades.</td><td>Proponer charlas de cierre de año.</td></tr>
+      <tr><td>Marzo de 2027</td><td>Arranca la temporada de eventos.</td><td>Lo que no entró en estas fechas se ofrece para marzo.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><div><span class="tit">Cada lunes, los números</span><p>En la reunión de los lunes (capítulo 7) se mira cuántos respondieron, cuántas fechas se confirmaron, cuántas grabaciones se hicieron y cuántos videos salieron. Con eso se decide dónde poner la semana.</p></div></div>
+</section>
+
 <!-- ================= numeros ================= -->
 <section class="cap" id="numeros">
-  <div class="apertura"><div class="n">19</div><div><h2>Los números, explicados</h2><p class="frase"><b>En una frase:</b> en tres días armamos 576 mensajes y abrimos 22 conversaciones con podcasts. Cada número dice cómo se cuenta, para que lo puedas explicar vos.</p></div></div>
+  <div class="apertura"><div class="n">21</div><div><h2>Los números, explicados</h2><p class="frase"><b>En una frase:</b> en tres días armamos 576 mensajes y abrimos 22 conversaciones con podcasts. Cada número dice cómo se cuenta, para que lo puedas explicar vos.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Lo que tenemos armado</h3>
   <div class="g3">
     <div class="tile"><b>270</b><span class="que">eventos en el CRM</span><span class="como">190 ya cargados y 80 más (las tandas<span class="def">(los mensajes que salen el mismo día)</span> 12 y 13) listos para cargar. 166 de los 190 tienen mail o WhatsApp.</span></div>
@@ -1500,7 +1703,7 @@ Equipe de Alan Tapia</div></div>
     <div class="barra"><span>Martes 13/10</span><span class="pista"><span class="lleno" style="width:91.9%"></span><span class="tope" style="left:62.5%"></span></span><span class="v">147</span></div>
     <div class="barra"><span>Miércoles 14/10</span><span class="pista"><span class="lleno" style="width:83.8%"></span><span class="tope" style="left:62.5%"></span></span><span class="v">134</span></div>
     <div class="barra"><span>Jueves 15/10</span><span class="pista"><span class="lleno" style="width:90%"></span><span class="tope" style="left:62.5%"></span></span><span class="v">144</span></div>
-    <p class="leyenda">La barra entera son 160 mails. Desde el martes se pasa el tope: por eso hace falta más cupo (capítulo 18).</p>
+    <p class="leyenda">La barra entera son 160 mails. Desde el martes se pasa el tope: por eso hace falta más cupo (capítulo 19).</p>
   </div>
   </div>
   <div class="tabla"><table>
@@ -1516,12 +1719,12 @@ Equipe de Alan Tapia</div></div>
       <tr><td class="num">164</td><td>Podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span> investigados sin propuesta: 126 sólo tienen Instagram o TikTok y 38 se marcaron «no priorizar».</td></tr>
     </tbody>
   </table></div>
-  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div><div><span class="tit">Cómo leer estos números</span><p>Los mensajes son el principio, no el resultado. El resultado son las respuestas, las fechas confirmadas y los videos. Pocos contestan el primer día: por eso el seguimiento (capítulo 16) es lo que más hace crecer los números.</p></div></div>
+  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div><div><span class="tit">Cómo leer estos números</span><p>Los mensajes son el principio, no el resultado. El resultado son las respuestas, las fechas confirmadas y los videos. Pocos contestan el primer día: por eso el seguimiento (capítulo 17) es lo que más hace crecer los números.</p></div></div>
 </section>
 
 <!-- ================= logros ================= -->
 <section class="cap" id="logros">
-  <div class="apertura"><div class="n">20</div><div><h2>Lo que logramos: ¿estamos en más eventos?</h2><p class="frase"><b>En una frase:</b> todavía no hay una charla nueva confirmada, pero por primera vez en el año llegan invitaciones de gente que no es del entorno de Alan.</p></div></div>
+  <div class="apertura"><div class="n">22</div><div><h2>Lo que logramos: ¿estamos en más eventos?</h2><p class="frase"><b>En una frase:</b> todavía no hay una charla nueva confirmada, pero por primera vez en el año llegan invitaciones de gente que no es del entorno de Alan.</p></div></div>
   <div class="objetivo compacto"><span class="tit">La respuesta corta, al 11/10</span><p>Todavía no hay <span>charlas nuevas</span> confirmadas. Sí hay <span>invitaciones</span> y una <span>grabación</span> propuesta, y esta semana salen 576 mensajes más.</p></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Antes del proyecto</h3>
   <div class="g2">
@@ -1555,13 +1758,13 @@ Equipe de Alan Tapia</div></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg> Clientes</h4><p class="txt">Dueños de comercios y empresas para Deenex y Xnod.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> Más invitaciones</h4><p class="txt">Un escenario lleva a otro: se recomiendan.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7M7 17h4"/></svg> Prensa</h4><p class="txt">Los medios buscan a quien ya habla en eventos.</p></div>
-    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.8 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.5 0-2.7-.6-3.2-1.7M12 6v2M12 16v2"/></svg> Charlas pagas</h4><p class="txt">Las gratis de hoy venden las pagas (capítulo 29).</p></div>
+    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.8 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.5 0-2.7-.6-3.2-1.7M12 6v2M12 16v2"/></svg> Charlas pagas</h4><p class="txt">Las gratis de hoy venden las pagas (capítulo 31).</p></div>
   </div>
 </section>
 
 <!-- ================= herramientas ================= -->
 <section class="cap" id="herramientas">
-  <div class="apertura"><div class="n">21</div><div><h2>Las herramientas: Claude, agentes y skills</h2><p class="frase"><b>En una frase:</b> antes de aprender a orquestar a las IA, hay que entender qué son. Son tres ideas, y con las tres se entiende todo lo demás.</p></div></div>
+  <div class="apertura"><div class="n">23</div><div><h2>Las herramientas: Claude, agentes y skills</h2><p class="frase"><b>En una frase:</b> antes de aprender a orquestar a las IA, hay que entender qué son. Son tres ideas, y con las tres se entiende todo lo demás.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg> Qué es Claude</h3>
   <p><b>Claude es una inteligencia artificial</b> (IA), hecha por la empresa Anthropic. En la práctica es un asistente con el que se habla escribiendo, como en un chat, en castellano y con palabras comunes. Le pedís algo y lo hace.</p>
   <div class="g2">
@@ -1596,12 +1799,12 @@ Equipe de Alan Tapia</div></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Envíos de la semana</h4><p class="txt">La planilla de Excel del Escritorio con lo que sale cada día.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Hostinger y hPanel</h4><p class="txt">La empresa de la casilla de Romina y su panel de control, donde se ve el plan y el tope de mails.</p></div>
   </div>
-  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div><span class="tit">Para seguir</span><p>Cómo crear tus propias skills está en el capítulo 22; las rutinas, en el 23; GitHub<span class="def">(un sitio donde se guardan proyectos con toda su historia)</span>, en el 24; y el cerebro de Alan, en el 25.</p></div></div>
+  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div><span class="tit">Para seguir</span><p>Cómo crear tus propias skills está en el capítulo 24; las rutinas, en el 25; GitHub<span class="def">(un sitio donde se guardan proyectos con toda su historia)</span>, en el 26; y el cerebro de Alan, en el 27.</p></div></div>
 </section>
 
 <!-- ================= skills ================= -->
 <section class="cap" id="skills">
-  <div class="apertura"><div class="n">22</div><div><h2>Cómo se crea una skill</h2><p class="frase"><b>En una frase:</b> una skill se arma una vez y se usa siempre. Cualquier tarea que hagas seguido puede convertirse en una.</p></div></div>
+  <div class="apertura"><div class="n">24</div><div><h2>Cómo se crea una skill</h2><p class="frase"><b>En una frase:</b> una skill se arma una vez y se usa siempre. Cualquier tarea que hagas seguido puede convertirse en una.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 16a4 4 0 0 1 4-4h10"/></svg> Repaso: qué es una skill</h3>
   <p>Una receta guardada: las instrucciones de una tarea que se repite, escritas una vez. Cuando la tarea aparece, Claude sigue la receta igual cada vez, sin que haya que volver a explicarle.</p>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Cómo está hecha por dentro</h3>
@@ -1628,7 +1831,7 @@ Reglas: las de Alan, que están en el manual.</div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg> banco-de-videos</h4><p class="txt">Arma guiones de videos cortos para Alan.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> revision-narrativa</h4><p class="txt">Revisa cómo se lee una propuesta o una presentación.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> browser-use</h4><p class="txt">Maneja un navegador para trabajar en páginas web.</p></div>
-    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> asistente</h4><p class="txt">El secretario de Alan, que vive en su cerebro (capítulo 25).</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> asistente</h4><p class="txt">El secretario de Alan, que vive en su cerebro (capítulo 27).</p></div>
   </div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-2.4z"/></svg> Cómo crear la tuya, paso a paso</h3>
   <ol class="pasos">
@@ -1654,13 +1857,13 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= rutinas ================= -->
 <section class="cap" id="rutinas">
-  <div class="apertura"><div class="n">23</div><div><h2>Las rutinas de Claude</h2><p class="frase"><b>En una frase:</b> una rutina es un pedido que Claude hace solo, a la hora que le digas, sin que tengas que escribirle en el momento.</p></div></div>
+  <div class="apertura"><div class="n">25</div><div><h2>Las rutinas de Claude</h2><p class="frase"><b>En una frase:</b> una rutina es un pedido que Claude hace solo, a la hora que le digas, sin que tengas que escribirle en el momento.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Qué es una rutina</h3>
   <p>Pensala como una alarma con tareas: a la hora fijada, Claude arranca, hace lo que dice la rutina y deja el resultado para que lo mires. Sirve para todo lo que se repite igual: el resumen de la mañana, el recordatorio de los seguimientos, el cierre del día.</p>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Las dos clases de rutinas</h3>
   <div class="g2">
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> En la compu: tareas programadas</h4><p class="txt">Viven en la app de Claude de la compu de Alan. Corren mientras la app está abierta; si estaba cerrada, corren apenas se abre. Pueden usar lo que hay en la compu: las carpetas, Chrome y el WhatsApp de Romina.</p></div>
-    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> En la nube: rutinas de Claude Code</h4><p class="txt">Corren en los servidores de Claude aunque la compu esté apagada. Trabajan sobre un repositorio<span class="def">(la carpeta de un proyecto en GitHub, con su historia)</span> de GitHub (capítulo 24) y pueden arrancar a una hora o cuando pasa algo ahí. No ven el WhatsApp ni el Chrome de la compu.</p></div>
+    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> En la nube: rutinas de Claude Code</h4><p class="txt">Corren en los servidores de Claude aunque la compu esté apagada. Trabajan sobre un repositorio<span class="def">(la carpeta de un proyecto en GitHub, con su historia)</span> de GitHub (capítulo 26) y pueden arrancar a una hora o cuando pasa algo ahí. No ven el WhatsApp ni el Chrome de la compu.</p></div>
   </div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> Qué tiene una rutina</h3>
   <ul class="lista-ok">
@@ -1691,7 +1894,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= github ================= -->
 <section class="cap" id="github">
-  <div class="apertura"><div class="n">24</div><div><h2>Qué es GitHub</h2><p class="frase"><b>En una frase:</b> GitHub es un sitio donde se guardan proyectos con toda su historia, para que nada se pierda y siempre se pueda volver atrás.</p></div></div>
+  <div class="apertura"><div class="n">26</div><div><h2>Qué es GitHub</h2><p class="frase"><b>En una frase:</b> GitHub es un sitio donde se guardan proyectos con toda su historia, para que nada se pierda y siempre se pueda volver atrás.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Para qué sirve</h3>
   <p>GitHub (se pronuncia «guit-jab») es una página de internet donde se guardan proyectos: programas, páginas web y también textos. La usan millones de equipos en el mundo. Lo bueno es que guarda cada cambio con su fecha y su autor, así que siempre se puede ver qué cambió y volver a una versión anterior.</p>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 16a4 4 0 0 1 4-4h10"/></svg> Las palabras de GitHub</h3>
@@ -1701,7 +1904,7 @@ Reglas: las de Alan, que están en el manual.</div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> Historial</h4><p class="txt">La lista de todos los guardados, del primero al último.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> Subir y bajar</h4><p class="txt">Mandar los cambios de la compu a GitHub, o traer a la compu lo que se cambió en otro lado.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> GitHub Pages</h4><p class="txt">Publica un repositorio como página web, con un link. Así está la página de Alan: soyalantapia.github.io/alan-tapia.</p></div>
-    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Cuenta</h4><p class="txt">La de Alan se llama soyalantapia. Ahí están sus proyectos, sus páginas y su cerebro, que es privado (capítulo 25). Cada vez que Claude anota algo en el cerebro, queda un commit con la fecha.</p></div>
+    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Cuenta</h4><p class="txt">La de Alan se llama soyalantapia. Ahí están sus proyectos, sus páginas y su cerebro, que es privado (capítulo 27). Cada vez que Claude anota algo en el cerebro, queda un commit con la fecha.</p></div>
   </div>
   <div class="g2 dos-cajas">
   <div class="caja bien"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></div><div><span class="tit">¿Tenés que aprender a programar? No.</span><p>Claude maneja GitHub por vos: sube, baja y guarda los cambios. Lo que sí sirve es saber qué es cada cosa, para entender lo que te cuenta.</p></div></div>
@@ -1714,7 +1917,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= cerebro ================= -->
 <section class="cap" id="cerebro">
-  <div class="apertura"><div class="n">25</div><div><h2>El cerebro de Alan</h2><p class="frase"><b>En una frase:</b> es la memoria escrita de Alan: quién es, con quién trabaja, qué decidió y qué tiene abierto. Claude lo lee para saber lo que sabe Alan.</p></div></div>
+  <div class="apertura"><div class="n">27</div><div><h2>El cerebro de Alan</h2><p class="frase"><b>En una frase:</b> es la memoria escrita de Alan: quién es, con quién trabaja, qué decidió y qué tiene abierto. Claude lo lee para saber lo que sabe Alan.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3A3.5 3.5 0 0 0 6 6.5 3.5 3.5 0 0 0 3.5 12 3.5 3.5 0 0 0 6 17.5 3.5 3.5 0 0 0 9.5 21h1V3z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5a3.5 3.5 0 0 1 2.5 5.5 3.5 3.5 0 0 1-2.5 5.5 3.5 3.5 0 0 1-3.5 3.5h-1V3z"/></svg> Qué es</h3>
   <p>Es un repositorio<span class="def">(la carpeta de un proyecto en GitHub, con su historia)</span> privado en GitHub<span class="def">(un sitio donde se guardan proyectos con toda su historia)</span>, <span class="mono">soyalantapia/alan-brain</span>, que también está como carpeta en la compu de Alan: <span class="mono">C:\Users\alann\dev\alan-brain</span>. Adentro hay más de 1.600 archivos de texto escritos siempre con el mismo formato, para que Claude los pueda leer, buscar y citar. Su producto es la decisión: todo lo que está ahí sirve para que Alan decida mejor.</p>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Qué tiene adentro</h3>
@@ -1744,7 +1947,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= aprovechar ================= -->
 <section class="cap" id="aprovechar">
-  <div class="apertura"><div class="n">26</div><div><h2>Cómo sacarle provecho al cerebro</h2><p class="frase"><b>En una frase:</b> el cerebro es la memoria de Alan por escrito. Si antes de cada paso le preguntás, trabajás sabiendo lo mismo que él.</p></div></div>
+  <div class="apertura"><div class="n">28</div><div><h2>Cómo sacarle provecho al cerebro</h2><p class="frase"><b>En una frase:</b> el cerebro es la memoria de Alan por escrito. Si antes de cada paso le preguntás, trabajás sabiendo lo mismo que él.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3A3.5 3.5 0 0 0 6 6.5 3.5 3.5 0 0 0 3.5 12 3.5 3.5 0 0 0 6 17.5 3.5 3.5 0 0 0 9.5 21h1V3z"/><path d="M14.5 3A3.5 3.5 0 0 1 18 6.5a3.5 3.5 0 0 1 2.5 5.5 3.5 3.5 0 0 1-2.5 5.5 3.5 3.5 0 0 1-3.5 3.5h-1V3z"/></svg> Qué sabe el cerebro hoy</h3>
   <div class="g4">
     <div class="tile"><b>1.666</b><span class="que">documentos</span><span class="como">Al 12/10. Cada uno dice de dónde sale lo que afirma.</span></div>
@@ -1816,7 +2019,7 @@ Reglas: las de Alan, que están en el manual.</div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Antes de una reunión</h4><p class="txt">«Preparame la reunión con [persona]: quién es, qué se habló la última vez y qué se le debe.»</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 16a4 4 0 0 1 4-4h10"/></svg> Después de una reunión</h4><p class="txt">«Anotá en el cerebro lo que se habló con [persona], con la fecha.»</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Mensajes y mails</h4><p class="txt">«Redactá la respuesta a [persona] con la voz de Alan», para que él la apruebe o la mande.</p></div>
-    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Recordatorios</h4><p class="txt">Con una rutina (capítulo 23): «todos los lunes a las 8:30, armame la semana de Alan».</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Recordatorios</h4><p class="txt">Con una rutina (capítulo 25): «todos los lunes a las 8:30, armame la semana de Alan».</p></div>
   </div>
   <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg></div><div><span class="tit">El asistente es de Alan</span><p>Alan tiene una skill, el asistente, que manda mensajes y mails con su voz, mueve su agenda y carga tareas en Norte. A las 8:00 y a las 21:00 le manda un resumen por WhatsApp. Vos lo podés usar para preguntar (qué quedó con alguien, qué tiene la semana), pero no para mandar en su nombre: eso lo pide él.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Las reglas de agenda de Alan (están en el cerebro)</h3>
@@ -1848,7 +2051,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= contexto ================= -->
 <section class="cap" id="contexto">
-  <div class="apertura"><div class="n">27</div><div><h2>Claude con el cerebro: contexto de todo</h2><p class="frase"><b>En una frase:</b> cuando Claude lee el cerebro antes de trabajar, sabe lo mismo que Alan, y vos trabajás con contexto absoluto.</p></div></div>
+  <div class="apertura"><div class="n">29</div><div><h2>Claude con el cerebro: contexto de todo</h2><p class="frase"><b>En una frase:</b> cuando Claude lee el cerebro antes de trabajar, sabe lo mismo que Alan, y vos trabajás con contexto absoluto.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-2.4z"/></svg> Cómo arrancar</h3>
   <ol class="pasos">
     <li><b>Abrí la app de Claude</b> y elegí como carpeta de trabajo la del cerebro: <span class="mono">C:\Users\alann\dev\alan-brain</span>. También se le puede pedir desde cualquier conversación que lo lea.</li>
@@ -1878,7 +2081,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= orquestar ================= -->
 <section class="cap" id="orquestar">
-  <div class="apertura"><div class="n">28</div><div><h2>Cómo orquestar a las IA: el tutorial</h2><p class="frase"><b>En una frase:</b> orquestar es dirigir. Como la directora de una orquesta, no tocás cada instrumento, pero decidís qué se toca, en qué orden, y escuchás que suene bien.</p></div></div>
+  <div class="apertura"><div class="n">30</div><div><h2>Cómo orquestar a las IA: el tutorial</h2><p class="frase"><b>En una frase:</b> orquestar es dirigir. Como la directora de una orquesta, no tocás cada instrumento, pero decidís qué se toca, en qué orden, y escuchás que suene bien.</p></div></div>
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg> El circuito, en cuatro pasos</h3>
   <div class="flujo">
     <div class="paso-f oscuro"><b>1 · Romina pide</b><span>Con un prompt<span class="def">(el pedido que se le escribe a Claude)</span> claro.</span></div>
@@ -1906,7 +2109,7 @@ Reglas: las de Alan, que están en el manual.</div>
       <tr><td>9:00</td><td>Leer y responder</td><td>«Revisá el WhatsApp y la casilla de Romina y proponeme una respuesta para cada uno.»</td></tr>
       <tr><td>10:00</td><td>Seguimientos<span class="def">(volver a escribirle a quien no respondió)</span></td><td>«Armá los seguimientos de hoy según la hoja Seguimientos y mostrámelos.»</td></tr>
       <tr><td>11:00</td><td>La tanda<span class="def">(los mensajes que salen el mismo día)</span> del día</td><td>WhatsApp primero; mails de a 25, aprobando cuando lo pida.</td></tr>
-      <tr><td>14:00</td><td>Tareas y formularios<span class="def">(una página con casilleros para completar)</span></td><td>Lo que toca ese día en el capítulo 34.</td></tr>
+      <tr><td>14:00</td><td>Tareas y formularios<span class="def">(una página con casilleros para completar)</span></td><td>Lo que toca ese día en el capítulo 36.</td></tr>
       <tr><td>16:00</td><td>Responder lo nuevo</td><td>Otra vuelta de respuestas: nadie queda sin contestar.</td></tr>
       <tr><td>17:00</td><td>Cargar el CRM y cerrar</td><td>«Cargá en el CRM lo que salió hoy y lo que respondieron», un resumen de cinco líneas y que actualice su memoria.</td></tr>
       <tr><td>Semanal</td><td>Buscar más y medir</td><td>Eventos, convocatorias<span class="def">(un llamado abierto para anotarse)</span> y podcasts<span class="def">(un programa de entrevistas que se publica en internet)</span> nuevos; contar respuestas, fechas y videos.</td></tr>
@@ -1928,6 +2131,21 @@ Reglas: las de Alan, que están en el manual.</div>
       <h4>Entender algo</h4><div class="prompt">Explicame con palabras simples qué quiere decir [palabra] y para qué sirve en el proyecto.</div>
     </div>
   </div>
+  <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Un día real: el sábado 10/10</h3>
+  <p>Así se trabajó el primer día de envíos, para que veas cómo se ve en la práctica:</p>
+  <div class="tabla"><table class="compacta">
+    <thead><tr><th style="width:30%">Qué pidió Alan</th><th>Qué hizo Claude</th></tr></thead>
+    <tbody>
+      <tr><td>«Vayamos uno a uno con los que tienen contacto, y armemos el mensaje juntos.»</td><td>Mostró el primer evento con su contacto y un borrador.</td></tr>
+      <tr><td>Correcciones: «empresario tecnológico», «más de un millón de usuarios», «Su historia es…», sacar palabras de máquina, sumar lo del filmado.</td><td>Reescribió hasta que Alan dijo que sí. Ese texto quedó como el estilo aprobado.</td></tr>
+      <tr><td>«Empezá a enviarlo.»</td><td>Mandó el mail desde tu casilla con el PDF, miró en Enviados que hubiera salido y lo anotó en el CRM.</td></tr>
+      <tr><td>«En WhatsApp enviale lo mismo que en el email.»</td><td>Mandó el PDF y el mismo texto desde tu WhatsApp.</td></tr>
+      <tr><td>Cuando el control de permisos<span class="def">(el aviso con el que Claude pide autorización)</span> frenó un envío.</td><td>Paró y le preguntó a Alan; siguió cuando él lo confirmó.</td></tr>
+      <tr><td>Después de varios: «enviale a todos sin preguntarme».</td><td>Siguió con el resto: ese día salieron 9 mails y 28 WhatsApp.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Lo que enseña: el estilo se arma una vez con Alan y después se repite; cada envío se verifica; y cuando algo frena, se pregunta.</p>
+
   <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6z"/></svg> Cómo pedirle bien las cosas a Claude</h3>
   <div class="g2">
     <ul class="lista-ok"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Una cosa por vez</b>, y concreta: qué, para quién y para cuándo.</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Pedile que te muestre antes de mandar</b> todo lo que sea nuevo.</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Si no entendés lo que te dice, pedile que te lo explique más simple.</b> Es parte de su trabajo.</span></li></ul>
@@ -1937,7 +2155,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= idea ================= -->
 <section class="cap" id="idea">
-  <div class="apertura"><div class="n">29</div><div><h2>Una idea en pausa: charlas para empresas</h2><p class="frase"><b>En una frase:</b> no es una tarea de esta semana. Está acá para que la conozcas, y porque se puede convertir en un ingreso: charlas pagas para empresas.</p></div></div>
+  <div class="apertura"><div class="n">31</div><div><h2>Una idea en pausa: charlas para empresas</h2><p class="frase"><b>En una frase:</b> no es una tarea de esta semana. Está acá para que la conozcas, y porque se puede convertir en un ingreso: charlas pagas para empresas.</p></div></div>
   <div class="g2">
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg> Qué es</h4><p class="txt">Charlas para los equipos comerciales de empresas grandes: convenciones de ventas<span class="def">(el encuentro anual de los vendedores de una empresa)</span>, cierres de año y arranques de temporada<span class="def">(la reunión con la que una empresa empieza su año comercial)</span>.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> Las charlas</h4><p class="txt">«Vender antes de tener», para vendedores, y «La IA<span class="def">(inteligencia artificial)</span> ya entró a tu empresa…», para gerentes. De 30 a 45 minutos.</p></div>
@@ -1970,8 +2188,10 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= fallas ================= -->
 <section class="cap" id="fallas">
-  <div class="apertura"><div class="n">30</div><div><h2>Cuando algo falla</h2><p class="frase"><b>En una frase:</b> casi todo tiene una salida simple. Lo único que nunca se hace es esquivar una regla.</p></div></div>
+  <div class="apertura"><div class="n">32</div><div><h2>Cuando algo falla</h2><p class="frase"><b>En una frase:</b> casi todo tiene una salida simple. Lo único que nunca se hace es esquivar una regla.</p></div></div>
   <div class="g2">
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> El WhatsApp no contesta</h4><p class="txt">Si la compu se reinició, el programa que conecta tu WhatsApp se apaga. Pedile a Claude: «Fijate si anda el WhatsApp de Romina y, si no, levantalo». Pasó el lunes 12/10.</p></div>
+    <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> El Chrome tiene abierta otra casilla</h4><p class="txt">Si el webmail<span class="def">(la página para leer y mandar mails desde el navegador)</span> muestra otra dirección que no es la tuya, no se manda nada desde ahí. Se abre tu casilla<span class="def">(una dirección de mail con su bandeja)</span>; la contraseña la ponés vos, nunca Claude.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg> Chrome se desconecta</h4><p class="txt">Abrir el panel de Claude en Chrome con la cuenta de Alan y avisarle a Claude. Si no responde, recargar la extensión<span class="def">(un agregado del navegador)</span> o reiniciar Chrome.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> El control de permisos frena un envío</h4><p class="txt">Aprobarlo si es lo que pediste. Si insiste, mandarlo a mano desde la planilla. Nunca esquivarlo.</p></div>
     <div class="card"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Un mail rebota</h4><p class="txt">«Estado» = Rebotó<span class="def">(el mail vuelve porque la dirección no existe)</span>, y pedirle a Claude otro contacto oficial. Nunca inventar uno.</p></div>
@@ -1989,8 +2209,9 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= aprendimos ================= -->
 <section class="cap" id="aprendimos">
-  <div class="apertura"><div class="n">31</div><div><h2>Lo que aprendimos</h2><p class="frase"><b>En una frase:</b> errores que ya pasaron, para que no se repitan.</p></div></div>
+  <div class="apertura"><div class="n">33</div><div><h2>Lo que aprendimos</h2><p class="frase"><b>En una frase:</b> errores que ya pasaron, para que no se repitan.</p></div></div>
   <div class="g2">
+    <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg> Una lista hecha con IA puede traer contactos falsos</h4><p class="txt">Links, teléfonos y mails con forma real que no existen. Cada contacto se mira en el sitio oficial antes de usarlo (capítulo 11).</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M8 19v2M16 19v2"/></svg> Los bots piden datos</h4><p class="txt">El bot<span class="def">(un programa que contesta solo)</span> de la Oficina de Empleo de Carlos Paz pidió DNI y domicilio. No se dan: se pide hablar con alguien.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18h.01"/></svg> Hay webs tomadas por casinos</h4><p class="txt">Algunas webs de entidades tienen links de apuestas escondidos o redirigen a un casino. No usar ni reenviar links de esas webs.</p></div>
     <div class="card lila"><h4><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> El saludo por nombre puede fallar</h4><p class="txt">En las cámaras, 8 de 11 saludos por nombre iban a casillas<span class="def">(una dirección de mail con su bandeja)</span> generales con el nombre de otra persona. Se corrigieron antes de mandar.</p></div>
@@ -2005,7 +2226,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= donde ================= -->
 <section class="cap" id="donde">
-  <div class="apertura"><div class="n">32</div><div><h2>Dónde está cada cosa</h2><p class="frase"><b>En una frase:</b> todo está en el Escritorio de la compu de Alan, en dos planillas de Google y en una carpeta para Claude.</p></div></div>
+  <div class="apertura"><div class="n">34</div><div><h2>Dónde está cada cosa</h2><p class="frase"><b>En una frase:</b> todo está en el Escritorio de la compu de Alan, en dos planillas de Google y en una carpeta para Claude.</p></div></div>
   <div class="tabla"><table>
     <thead><tr><th style="width:30%">Qué</th><th>Dónde</th></tr></thead>
     <tbody>
@@ -2027,17 +2248,18 @@ Reglas: las de Alan, que están en el manual.</div>
       <tr><td>Las rutinas de la compu</td><td class="mono">C:\Users\alann\.claude\scheduled-tasks</td></tr>
     </tbody>
   </table></div>
-  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div><span class="tit">Los otros frentes de Alan</span><p>Prensa y podcasts tienen su propio taller y su propia sesión de Claude («Gerente de prensa»), y la marca y los videos tienen otra (los guiones viven en el Notion de Alan, «Guiones de video»). Regla de Alan: un frente no le avisa nada a otro sin que él lo pida. Si algo de prensa o de marca toca este proyecto, se le pregunta primero a Alan. Desde el 12/10 la prensa también es parte de tu rol (capítulo 15): usá lo que ya está publicado (la página y el kit de Alan) y, antes de cambiar algo de ese taller, preguntale a Alan.</p></div></div>
+  <div class="caja"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div><span class="tit">Los otros frentes de Alan</span><p>Prensa y podcasts tienen su propio taller y su propia sesión de Claude («Gerente de prensa»), y la marca y los videos tienen otra (los guiones viven en el Notion de Alan, «Guiones de video»). Regla de Alan: un frente no le avisa nada a otro sin que él lo pida. Si algo de prensa o de marca toca este proyecto, se le pregunta primero a Alan. Desde el 12/10 la prensa también es parte de tu rol (capítulo 16): usá lo que ya está publicado (la página y el kit de Alan) y, antes de cambiar algo de ese taller, preguntale a Alan.</p></div></div>
 </section>
 
 <!-- ================= glosario ================= -->
 <section class="cap" id="glosario">
-  <div class="apertura"><div class="n">33</div><div><h2>Glosario: las palabras difíciles</h2><p class="frase"><b>En una frase:</b> en orden alfabético. Si falta alguna, preguntale a Claude y sumala acá.</p></div></div>
+  <div class="apertura"><div class="n">35</div><div><h2>Glosario: las palabras difíciles</h2><p class="frase"><b>En una frase:</b> en orden alfabético. Si falta alguna, preguntale a Claude y sumala acá.</p></div></div>
+  <input class="buscar-glosario" id="buscar-glosario" type="search" placeholder="Buscar una palabra" aria-label="Buscar en el glosario"><p id="glosario-vacio" hidden>No está en el glosario: preguntale a Claude y sumala.</p>
   <dl class="glosario">
     <div><dt>Aceleradora / incubadora</dt><dd>Programa que ayuda a emprendimientos a crecer. Suelen invitar a oradores y mentores.</dd></div>
     <div><dt>Adjunto</dt><dd>Un archivo que va con un mail o un WhatsApp. Acá, casi siempre el PDF de Alan.</dd></div>
     <div><dt>Agenda pública</dt><dd>Todo lo que Alan hace frente a otros: charlas, clases, paneles, grabaciones y notas.</dd></div>
-    <div><dt>Agente</dt><dd>Una IA que, además de contestar, hace tareas por su cuenta, paso a paso (capítulo 21).</dd></div>
+    <div><dt>Agente</dt><dd>Una IA que, además de contestar, hace tareas por su cuenta, paso a paso (capítulo 23).</dd></div>
     <div><dt>Asunto</dt><dd>El título de un mail, lo primero que se lee. Acá: «[evento]: [gancho]», de 60 caracteres o menos.</dd></div>
     <div><dt>Bandeja / Enviados</dt><dd>Las carpetas de la casilla. En Enviados quedan los mails que salieron: se mira antes de mandar.</dd></div>
     <div><dt>Bloque</dt><dd>Un grupo de hasta 25 mails que se mandan juntos, con 15 minutos de pausa entre bloques.</dd></div>
@@ -2048,7 +2270,7 @@ Reglas: las de Alan, que están en el manual.</div>
     <div><dt>Casilla</dt><dd>Una dirección de mail con su bandeja. La de Romina es romina@soyalantapia.com.</dd></div>
     <div><dt>CC (con copia)</dt><dd>Una segunda dirección que recibe el mismo mail.</dd></div>
     <div><dt>Charla, clase, panel, jurado, mentoría</dt><dd>Los formatos de Alan: habla solo; da una clase; conversa con otros; evalúa proyectos; aconseja a emprendedores.</dd></div>
-    <div><dt>Claude</dt><dd>La inteligencia artificial que usamos (capítulo 21).</dd></div>
+    <div><dt>Claude</dt><dd>La inteligencia artificial que usamos (capítulo 23).</dd></div>
     <div><dt>Clúster</dt><dd>Un grupo de empresas de un mismo sector que trabajan juntas.</dd></div>
     <div><dt>Commit</dt><dd>Cada guardado en GitHub: qué cambió, quién, cuándo y por qué.</dd></div>
     <div><dt>Community manager</dt><dd>Quien maneja las redes sociales. En Brasil se dice «social media».</dd></div>
@@ -2057,6 +2279,7 @@ Reglas: las de Alan, que están en el manual.</div>
     <div><dt>CPI</dt><dd>El Colegio de Corredores Públicos Inmobiliarios de Córdoba. Lo maneja Alan: no le escribimos.</dd></div>
     <div><dt>CRM</dt><dd>Una planilla para seguir a cada contacto: a quién le escribimos, cuándo, qué respondió y qué falta.</dd></div>
     <div><dt>Cron</dt><dd>El código corto que dice cuándo corre una rutina: «0 9 * * 1-5» es a las 9:00, de lunes a viernes.</dd></div>
+    <div><dt>Crudo</dt><dd>El video completo de una charla o una grabación, tal como salió, sin editar.</dd></div>
     <div><dt>Daily</dt><dd>Una reunión corta, de 10 a 15 minutos, todos los días de trabajo y a la misma hora.</dd></div>
     <div><dt>Deenex, Xnod, MyAlquiler y MiSanPedro</dt><dd>Lo que fundó Alan: Deenex, la app propia de las cadenas gastronómicas; Xnod, software a medida e IA para empresas; MyAlquiler, alquileres para inmobiliarias; MiSanPedro, descuentos para los vecinos de San Pedro (capítulo 4).</dd></div>
     <div><dt>Dominio</dt><dd>La parte de un mail que va después de la arroba (por ejemplo, soyalantapia.com).</dd></div>
@@ -2090,14 +2313,15 @@ Reglas: las de Alan, que están en el manual.</div>
     <div><dt>Prompt</dt><dd>El pedido que se le escribe a Claude.</dd></div>
     <div><dt>Puerta</dt><dd>Un lugar concreto por donde Alan puede entrar: un área de una universidad, un club, una cámara.</dd></div>
     <div><dt>Rebote</dt><dd>Cuando un mail vuelve porque la dirección no existe o no lo aceptaron.</dd></div>
+    <div><dt>Recorte</dt><dd>Un pedazo corto del video de una charla o una entrevista, con lo mejor, para publicar en redes.</dd></div>
     <div><dt>Redacción</dt><dd>El equipo de periodistas de un medio. Cada periodista cubre una sección: tecnología, economía, emprendedores.</dd></div>
     <div><dt>Relaciones públicas</dt><dd>Cuidar la relación de alguien con el público: medios, eventos, instituciones y comunidades. Tu rol es Directora de Relaciones Públicas.</dd></div>
     <div><dt>Repositorio</dt><dd>La carpeta de un proyecto en GitHub, con todos sus archivos y su historia. Puede ser privado o público.</dd></div>
     <div><dt>Rutina o tarea programada</dt><dd>Un pedido que Claude hace solo, a la hora que se le diga.</dd></div>
-    <div><dt>Seguimiento</dt><dd>Volver a escribirle a alguien que no respondió (capítulo 16). En inglés, «follow-up».</dd></div>
+    <div><dt>Seguimiento</dt><dd>Volver a escribirle a alguien que no respondió (capítulo 17). En inglés, «follow-up».</dd></div>
     <div><dt>Sesión</dt><dd>Una conversación con Claude. Si se corta, se abre otra con el prompt de inicio.</dd></div>
     <div><dt>Sincronizar</dt><dd>Traer a una compu lo que se guardó desde otra, para que las dos tengan lo mismo.</dd></div>
-    <div><dt>Skill</dt><dd>Una receta guardada con los pasos de una tarea que se repite (capítulo 21).</dd></div>
+    <div><dt>Skill</dt><dd>Una receta guardada con los pasos de una tarea que se repite (capítulo 23).</dd></div>
     <div><dt>SKILL.md</dt><dd>El archivo principal de una skill: su nombre, cuándo usarla y sus pasos.</dd></div>
     <div><dt>Spam</dt><dd>Correo no deseado. Muchos mails seguidos desde una casilla nueva pueden caer ahí.</dd></div>
     <div><dt>Speaker</dt><dd>Orador, en inglés. Algunos formularios lo piden así.</dd></div>
@@ -2115,7 +2339,7 @@ Reglas: las de Alan, que están en el manual.</div>
 
 <!-- ================= tareas ================= -->
 <section class="cap" id="tareas">
-  <div class="apertura"><div class="n">34</div><div><h2>Las tareas de Romina</h2><p class="frase"><b>En una frase:</b> llegaste al final del manual: ahora, a trabajar. Hoy todo es un sí. Las decisiones que esperaban a Alan ahora son tareas para entrar en todos lados. Las marcadas <span class="etq">consultar</span> se le consultan antes de cerrarlas.</p></div></div>
+  <div class="apertura"><div class="n">36</div><div><h2>Las tareas de Romina</h2><p class="frase"><b>En una frase:</b> llegaste al final del manual: ahora, a trabajar. Hoy todo es un sí. Las decisiones que esperaban a Alan ahora son tareas para entrar en todos lados. Las marcadas <span class="etq">consultar</span> se le consultan antes de cerrarlas.</p></div></div>
   <div class="tareas"><div class="cab"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Lunes 12/10</div><ul>
     <li><span><b>Mirar el plan de la casilla<span class="def">(una dirección de mail con su bandeja)</span></b> en hPanel<span class="def">(el panel de control de Hostinger)</span>, primero que nada <span class="etq">consultar</span><span class="det">Correos › Buzones › «Ver límites». Si es la gratis, avisarle a Alan.</span></span></li>
     <li><span><b>Seguimiento<span class="def">(volver a escribirle a quien no respondió)</span> de lo del sábado:</b> 9 mails y 28 WhatsApp<span class="det">Hoja «Seguimientos»: cada fila dice qué hacer y tiene el texto listo.</span></span></li>
@@ -2140,6 +2364,7 @@ Reglas: las de Alan, que están en el manual.</div>
   </ul></div>
   <div class="tareas"><div class="cab"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg> Jueves 15 y viernes 16/10</div><ul>
     <li><span><b>Mandar la hoja del jueves:</b> 144 mails<span class="det">Con esto sale todo, antes del viernes.</span></span></li>
+    <li><span><b>Preparar el sábado 17/10 en Cuna de Emprendedores</b><span class="det">Con la lista del día del evento (capítulo 13): horario y lugar confirmados, el equipo avisado y la ficha<span class="def">(el resumen de un evento o una grabación para Alan)</span> a Alan el viernes a la noche.</span></span></li>
     <li><span><b>Viernes: la reserva</b><span class="det">Lo que falló o quedó, y los seguimientos del día.</span></span></li>
     <li><span><b>Contar la semana</b><span class="det">Cuántos respondieron y cuántas fechas y grabaciones hay confirmadas.</span></span></li>
   </ul></div>
@@ -2165,5 +2390,20 @@ Reglas: las de Alan, que están en el manual.</div>
 
 </main>
 <a class="arriba solo-web" href="#" aria-label="Volver arriba">↑</a>
+<script>
+(function () {
+  var input = document.getElementById('buscar-glosario');
+  if (!input) return;
+  var items = [].slice.call(document.querySelectorAll('dl.glosario > div'));
+  var norm = function (t) { return t.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase(); };
+  var textos = items.map(function (el) { return norm(el.textContent); });
+  var vacio = document.getElementById('glosario-vacio');
+  input.addEventListener('input', function () {
+    var q = norm(input.value.trim()), hay = 0;
+    items.forEach(function (el, k) { var ok = !q || textos[k].indexOf(q) > -1; el.hidden = !ok; if (ok) hay++; });
+    vacio.hidden = hay > 0;
+  });
+})();
+</script>
 </body>
 </html>
